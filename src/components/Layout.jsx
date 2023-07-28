@@ -6,9 +6,13 @@ import { FaInstagramSquare } from 'react-icons/fa'
 
 
 import { Link, Outlet, useLocation } from "react-router-dom"
+import { useState } from 'react'
 
 const Layout = () => {
     const location = useLocation()
+
+    const [navOn, setNavOn] = useState(false);
+    
     return (
         <main className='bg-brown'>
 
@@ -19,17 +23,24 @@ const Layout = () => {
                 </div>
                 {/* navigation link */}
                 <div className="hidden mobileLarge:flex gap-5 text-[rgb(198,172,150)] text-lg mt-5">
-                    <Link to="" className={`${location.pathname === '/' ? 'text-white':''}`}>Home</Link>
-                    <Link to="">Coffee & Chapters</Link>
-                    <Link to="">About</Link>
-                    <Link to="">Contact</Link>
-                    <span>|</span>
-                    <Link to="">Orders</Link>
+                    <Link to="/" className={`${location.pathname === '/' ? 'text-white':''}`}>Home</Link>
+                    <Link to="/menu" className={`${location.pathname === '/menu' ? 'text-white':''}`}>Coffee & Chapters</Link>
+                    <Link to="/about" className={`${location.pathname === '/about' ? 'text-white':''}`}>About</Link>
+                    <Link to="/orders" className={`${location.pathname === '/orders' ? 'text-white':''}`}>Orders</Link>
                 </div>
-                <button className='mobileLarge:hidden flex text-2xl text-white'>
+                <button onClick={()=>{navOn ? setNavOn(false):setNavOn(true)}} className='mobileLarge:hidden flex text-2xl text-white'>
                     <GiHamburgerMenu/>
                 </button>
             </nav>
+            {/* dropdown menu */}
+            <div className={`${navOn ? 'flex':'hidden'} mobileLarge:hidden bg-[rgb(190,145,97)] mb-3 transition duration-300 ease-in-out shadow-[1px_2px_2px_3px_inset_rgba(0,0,0,0.4)]`}>
+                <div className='container mx-auto text-[rgb(198,172,150)] text-lg flex flex-col gap-5 py-10 '>
+                    <Link to="/" className={`${location.pathname === '/' ? 'text-white':''}`}>Home</Link>
+                    <Link to="/menu" className={`${location.pathname === '/menu' ? 'text-white':''}`}>Coffee & Chapters</Link>
+                    <Link to="/about" className={`${location.pathname === '/about' ? 'text-white':''}`}>About</Link>
+                    <Link to="/orders" className={`${location.pathname === '/orders' ? 'text-white':''}`}>Orders</Link>
+                </div>
+            </div>
 
             <section>
                 <Outlet/>

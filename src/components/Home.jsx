@@ -5,7 +5,7 @@ import heroImg from '/src/assets/hero-002-free-img.png'
 import cappucino from '/src/assets/product-01-free-img.png'
 import cafeLatte from '/src/assets/product-02-free-img.png'
 import darkCoffee from '/src/assets/product-03-free-img.png'
-import bookHome from '/src/assets/homeBookImg.jfif'
+import bookHome from '/src/assets/Kimi-no-na-wa-blu-ray.webp'
 import tinapay from '/src/assets/Basket-with-croissants-on-transparent-background-PNG.png'
 
 import { Link } from "react-router-dom"
@@ -22,7 +22,7 @@ const Home = () => {
           
           {/* button container */}
             <div className='flex items-center gap-2 mt-10'>
-                <Link to=''  className='text-4xl'>
+                <Link to='/menu'  className='text-4xl'>
                   <AiOutlinePlayCircle/>
                 </Link>
                 <p>
@@ -44,7 +44,7 @@ const Home = () => {
               <h2 className='text-4xl font-semibold'>Drinks</h2>
               <span className='h-[1px] border-[1px] border-solid border-white w-[4rem] mb-3'></span>
               <p className='text-gray w-2/3'>Delicious drinks made with the finest ingredients, sustainability and ethical sourcing in mind. From coffee to iced tea and smoothies, we have something for everyone.</p>
-              <Link to='' className='flex items-center gap-1 mt-5 text-gray hover:text-white'>
+              <Link to='/menu' className='flex items-center gap-1 mt-5 text-gray hover:text-white'>
                 Menu
                 <span>
                   <FaChevronRight/>
@@ -53,7 +53,7 @@ const Home = () => {
           </div>
 
           {/* coffe container */}
-          <div className='mx-5 flex items-center justify-center gap-5 flex-wrap'>
+          <div className='mx-5 mt-5 flex items-center justify-center gap-5 flex-wrap'>
               {/* coffee 1 */}
               <div className='bg-[rgb(190,145,97)] drop-shadow-xl p-5 flex flex-col items-center text-center w-full smallScreen:w-96 rounded-lg text-white'>
                   <div className='w-full h-56'>
@@ -104,7 +104,7 @@ const Home = () => {
               <h2 className='text-3xl'>Elevate your coffee experience</h2>
               <p  className='text-xl me-3'>with our delectable croissants. Baked fresh daily and made with the finest ingredients, our croissants are the perfect addition to your morning coffee or midday break. Choose from a variety of classic and seasonal flavors, and savor every delicious bite at our coffee shop.</p>
 
-              <Link to='' className='flex items-center gap-2 mt-5'>
+              <Link to='/menu' className='flex items-center gap-2 mt-5'>
                 Menu 
                 <span><FaChevronRight/></span>
               </Link>
@@ -112,14 +112,14 @@ const Home = () => {
           </div>
 
           {/* iced coffee container */}
-          <div className='mt-5 flex flex-col tablet:flex-row items-center bg-[rgb(176,144,120)] p-10 rounded-3xl drop-shadow-xl'>
+          <div className='mt-5 flex flex-col tablet:flex-row items-center bg-[rgb(176,144,120)] p-10 rounded-3xl drop-shadow-xl gap-10'>
             <div className='text-white flex flex-col flex-1'>
               <p className='text-3xl text-gray mb-3'>Coffee & Chapters</p>
               <h1 className='text-4xl'>Manga</h1>
               <span className='h-[1px] border-[1px] border-solid border-white mb-3 w-16'></span>
-              <p className='text-xl'>Step into our captivating coffee sanctuary, where the magical world of 'Date A Live' seamlessly intertwines with the tantalizing allure of freshly brewed coffee, creating an experience unlike any other. As you venture into this enchanting haven, you'll find yourself transported to a realm where manga adventures and coffee creations dance in perfect harmony, igniting your senses and awakening your inner explorer.</p>
+              <p className='text-xl'>Step into the enchanting realm of 'Kimi no Na wa' at our anime-inspired coffee sanctuary, where the magic of storytelling intertwines with the tantalizing aromas of freshly brewed coffee. Like the extraordinary journey depicted in the anime, our coffee shop invites you to embark on an unforgettable adventure filled with heartwarming moments and delightful flavors.</p>
 
-              <Link to='' className='flex items-center gap-2 mt-5'>
+              <Link to='/menu' className='flex items-center gap-2 mt-5'>
               Manga 
                 <span><FaChevronRight/></span>
               </Link>
